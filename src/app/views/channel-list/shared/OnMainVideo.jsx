@@ -118,7 +118,16 @@ const SimpleForm = () => {
               validators={['required', 'isEmail']}
               errorMessages={['this field is required', 'email is not valid']}
             />
-            <p style={{ borderBottom: '1px solid lightgray' }}></p>
+            {/* <p style={{ borderBottom: '1px solid lightgray' }}></p> */}
+            {/* <hr style={{color:"red"}}/> */}
+            <hr
+        style={{
+          background: 'lime',
+          color: 'lime',
+          borderColor: 'lime',
+          height: '3px',
+        }}
+      />
             {/* <LocalizationProvider dateAdapter={AdapterDateFns}>
               <DatePicker
                 value={date}
@@ -144,7 +153,7 @@ const SimpleForm = () => {
               validators={["required", "minStringLength:16", "maxStringLength: 16"]}
             /> */}
           </Grid>
-          <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: -6, ml: 5, mr: 5}}>
+          <Grid direction="row" item md={12}  style={{display:"flex",paddingTop:0}}>
             Video
             <TextField fullWidth autoFocus id="name" type="file" margin="dense" />
             Video Image

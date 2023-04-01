@@ -40,6 +40,7 @@ export default function ShowChannelList() {
             );
           })}
         </Box>
+
         <Box id="inside-channel">
           <Box className="categories">
             <h1 style={{ marginLeft: '5px' }}>Categories</h1>
@@ -47,6 +48,7 @@ export default function ShowChannelList() {
               <p style={{ marginLeft: '5px' }}>category list</p>
             </Box>
           </Box>
+
           <Box className="videos">
             <Box className="main-videos">
               <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -78,26 +80,111 @@ export default function ShowChannelList() {
 
             <Box>
               <Box className="videos-category">
-                <p>Categories</p>
-                {/* <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{ fontWeight: 'bold', fontSize: 'large', height: '45px' }}
+                <Box
+                  sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                 >
-                  +Add Category
-                </Button> */}
-                <AddCategoriesButton />
-              </Box>
+                  <p>Categories</p>
+                  {/* <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{ fontWeight: 'bold', fontSize: 'large' }}
+                    sx={{ fontWeight: 'bold', fontSize: 'large', height: '45px' }}
+                    onClick={() => navigate('/channel-list/OnMainVideo')}
+                  >
+                    +Add Category
+                  </Button> */}
+                  <AddCategoriesButton />
+                </Box>
 
-              <Box
-                sx={{
-                  backgroundColor: 'lightgreen',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center'
-                }}
-              >
-                <p>Popular Songs</p>
+                <Box
+                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                >
+                  <Box sx={{ display: 'flex' }}>
+                    <p>New Movie</p>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                  <Box className="list list1" style={{ width: 160 }}>
+                    <Box className="list-image">
+                      <img src="" alt="channel-logo" />
+                    </Box>
+                    <Box className="list-name">Video</Box>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                </Box>
+
+                <Box
+                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                >
+                   <Box sx={{ display: 'flex' }}>
+                    <p>Upcoming Movie</p>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                  <Box className="list list1" style={{ width: 160 }}>
+                    <Box className="list-image">
+                      <img src="" alt="channel-logo" />
+                    </Box>
+                    <Box className="list-name">Video</Box>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                </Box>
+
+                <Box
+                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                >
+                   <Box sx={{ display: 'flex' }}>
+                    <p>Popular Movie</p>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                  <Box className="list list1" style={{ width: 160 }}>
+                    <Box className="list-image">
+                      <img src="" alt="channel-logo" />
+                    </Box>
+                    <Box className="list-name">Video</Box>
+                    <Box className="list-name">
+                    <Icon color="primary" sx={{ mt: 1 }}>
+                        edit_icon
+                      </Icon>
+                      <IconButton className="button" aria-label="Delete" color="error">
+                        <Icon sx={{ mt: -2 }}>delete</Icon>
+                      </IconButton>
+                    </Box>
+                  </Box>
+                </Box>
               </Box>
             </Box>
           </Box>
