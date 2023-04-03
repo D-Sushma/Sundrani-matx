@@ -10,7 +10,7 @@ import FormDialogButton from './FormDialogButton';
 export default function ShowChannelList() {
   const navigate = useNavigate();
   return (
-    <>
+    <React.Fragment>
       <FormDialogButton />
       <Box id="channel-parent">
         <Box id="channel">
@@ -81,28 +81,21 @@ export default function ShowChannelList() {
             <Box>
               <Box className="videos-category">
                 <Box
-                  sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center'
+                  }}
                 >
                   <p>Categories</p>
-                  {/* <Button
-                    variant="contained"
-                    color="primary"
-                    sx={{ fontWeight: 'bold', fontSize: 'large' }}
-                    sx={{ fontWeight: 'bold', fontSize: 'large', height: '45px' }}
-                    onClick={() => navigate('/channel-list/OnMainVideo')}
-                  >
-                    +Add Category
-                  </Button> */}
                   <AddCategoriesButton />
                 </Box>
 
-                <Box
-                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-                >
+                <Box sx={{ mb: 2 }}>
                   <Box sx={{ display: 'flex' }}>
                     <p>New Movie</p>
                     <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
+                      <Icon color="primary" sx={{ mt: 1 }}>
                         edit_icon
                       </Icon>
                       <IconButton className="button" aria-label="Delete" color="error">
@@ -110,29 +103,41 @@ export default function ShowChannelList() {
                       </IconButton>
                     </Box>
                   </Box>
-                  <Box className="list list1" style={{ width: 160 }}>
-                    <Box className="list-image">
-                      <img src="" alt="channel-logo" />
+                  <Box style={{ display: 'flex' }}>
+                    <Box className="list list1" style={{ width: 160 }}>
+                      <Box className="list-image">
+                        <img src="" alt="channel-logo" />
+                      </Box>
+                      <Box className="list-name">Video</Box>
+                      <Box className="list-name">
+                        <Icon color="primary" sx={{ mt: 1 }}>
+                          edit_icon
+                        </Icon>
+                        <IconButton className="button" aria-label="Delete" color="error">
+                          <Icon sx={{ mt: -2 }}>delete</Icon>
+                        </IconButton>
+                      </Box>
                     </Box>
-                    <Box className="list-name">Video</Box>
-                    <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
-                        edit_icon
-                      </Icon>
-                      <IconButton className="button" aria-label="Delete" color="error">
-                        <Icon sx={{ mt: -2 }}>delete</Icon>
-                      </IconButton>
+                    <Box
+                      style={{
+                        width: 160,
+                        height: '180px',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        border: '1px solid lightgray'
+                      }}
+                    >
+                      <Button variant="outlined" onClick={()=> navigate('/channel-list/ShowAllButton')}>Show All</Button>
                     </Box>
                   </Box>
                 </Box>
 
-                <Box
-                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-                >
-                   <Box sx={{ display: 'flex' }}>
+                <Box sx={{ mb: 2 }}>
+                  <Box sx={{ display: 'flex' }}>
                     <p>Upcoming Movie</p>
                     <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
+                      <Icon color="primary" sx={{ mt: 1 }}>
                         edit_icon
                       </Icon>
                       <IconButton className="button" aria-label="Delete" color="error">
@@ -146,7 +151,7 @@ export default function ShowChannelList() {
                     </Box>
                     <Box className="list-name">Video</Box>
                     <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
+                      <Icon color="primary" sx={{ mt: 1 }}>
                         edit_icon
                       </Icon>
                       <IconButton className="button" aria-label="Delete" color="error">
@@ -156,13 +161,11 @@ export default function ShowChannelList() {
                   </Box>
                 </Box>
 
-                <Box
-                // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-                >
-                   <Box sx={{ display: 'flex' }}>
+                <Box sx={{ mb: 2 }}>
+                  <Box sx={{ display: 'flex' }}>
                     <p>Popular Movie</p>
                     <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
+                      <Icon color="primary" sx={{ mt: 1 }}>
                         edit_icon
                       </Icon>
                       <IconButton className="button" aria-label="Delete" color="error">
@@ -176,7 +179,7 @@ export default function ShowChannelList() {
                     </Box>
                     <Box className="list-name">Video</Box>
                     <Box className="list-name">
-                    <Icon color="primary" sx={{ mt: 1 }}>
+                      <Icon color="primary" sx={{ mt: 1 }}>
                         edit_icon
                       </Icon>
                       <IconButton className="button" aria-label="Delete" color="error">
@@ -190,6 +193,6 @@ export default function ShowChannelList() {
           </Box>
         </Box>
       </Box>
-    </>
+    </React.Fragment>
   );
 }
