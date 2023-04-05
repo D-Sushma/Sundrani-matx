@@ -20,7 +20,7 @@ export default function FormDialog() {
         variant="outlined"
         color="secondary"
         style={{ border: '3px solid orange' }}
-        sx={{ m: 2, fontWeight: 'bold', color: 'red', fontSize: 'large' }}
+        sx={{ m: 2, fontWeight: 'bold', color: 'red', fontSize: 'large', borderRadius:"20px 20px 0px 20px" }}
         onClick={handleClickOpen}
       >
         Add Channel

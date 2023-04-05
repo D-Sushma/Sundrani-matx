@@ -78,11 +78,11 @@ export default function ShowAllButton() {
                       {ele.name}
                     </Box>
                     <Box sx={{width:"20%",height:"100%",display:"flex", justifyContent:"center", alignItems:"center"}}>
-                      <Fab aria-label="Edit" className="button" color="" sx={{border:"1px solid black", backgroundColor:"orange",width:"50px",height:"50px"}}>
-                        <Icon sx={{color:"black"}}>edit_icon</Icon>
+                      <Fab aria-label="Edit" className="button" color="" sx={{border:"1px solid black", backgroundColor:"white",width:"50px",height:"50px"}}>
+                        <Icon color="primary">edit_icon</Icon>
                       </Fab>
-                      <Fab aria-label="Edit" className="button" color="" sx={{ml:1,border:"1px solid black", backgroundColor:"orange",width:"50px",height:"50px"}}>
-                        <IconButton className="button" aria-label="Delete" sx={{color:"black"}}>
+                      <Fab aria-label="Edit" className="button" color="" sx={{ml:1,border:"1px solid black", backgroundColor:"white",width:"50px",height:"50px"}}>
+                        <IconButton className="button" aria-label="Delete" color="primary">
                           <Icon>delete</Icon>
                         </IconButton>
                       </Fab>

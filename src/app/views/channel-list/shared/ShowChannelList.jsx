@@ -5,13 +5,13 @@ import { Box, IconButton, Icon, Button } from '@mui/material';
 import ChannelListObject from './ChannelListObject';
 import { useNavigate } from 'react-router-dom';
 import AddCategoriesButton from './AddCategoriesButton';
-import FormDialogButton from './FormDialogButton';
+import AddChannelButton from './AddChannelButton';
 
 export default function ShowChannelList() {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <FormDialogButton />
+      <AddChannelButton />
       <Box id="channel-parent">
         <Box id="channel">
           {ChannelListObject.map((ele, i) => {

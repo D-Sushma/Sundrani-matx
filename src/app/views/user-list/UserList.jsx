@@ -3,7 +3,6 @@ import UserTable from './shared/UserTable';
 import { SimpleCard } from 'app/components';
 import { Breadcrumb } from 'app/components';
 import { styled } from '@mui/material';
-import DataTable from './shared/DataTable';
 
 const ProgressRoot = styled('div')(({ theme }) => ({
   margin: '30px',
@@ -34,7 +33,6 @@ export default function UserList() {
         <SimpleCard title="User List">
           <UserTable />
         </SimpleCard>
-          <DataTable />
           
       </ProgressRoot>
     </>
