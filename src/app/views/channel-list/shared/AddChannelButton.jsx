@@ -20,7 +20,13 @@ export default function FormDialog() {
         variant="outlined"
         color="secondary"
         style={{ border: '3px solid orange' }}
-        sx={{ m: 2, fontWeight: 'bold', color: 'red', fontSize: 'large', borderRadius:"20px 20px 0px 20px" }}
+        sx={{
+          m: 2,
+          fontWeight: 'bold',
+          color: 'red',
+          fontSize: 'large',
+          borderRadius: '10px 0px 10px 0px'
+        }}
         onClick={handleClickOpen}
       >
         Add Channel
@@ -28,42 +34,44 @@ export default function FormDialog() {
 
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         {/* <DialogTitle id="form-dialog-title">Create Channel</DialogTitle> */}
-        <DialogTitle >{"Create Channel"}</DialogTitle>
+        <Box sx={{ color: '#0d47a1' }}>
+          <DialogTitle>{'Create Channel'}</DialogTitle>
 
-        <DialogContent>
-          {/* <DialogContentText>
+          <DialogContent>
+            {/* <DialogContentText>
             To subscribe to this website, please enter your email address here. We will send updates
             occasionally.
           </DialogContentText> */}
-          Channel Icon
-          <TextField
-            fullWidth
-            autoFocus
-            id="name"
-            type="file"
-            margin="dense"
-            // label="Choose file"
-          />
-          Channel Name
-          <TextField
-            fullWidth
-            autoFocus
-            id="name"
-            type="text"
-            margin="dense"
-            variant="standard"
-          />
-        </DialogContent>
+            Channel Icon
+            <TextField
+              fullWidth
+              autoFocus
+              id="name"
+              type="file"
+              margin="dense"
+              // label="Choose file"
+            />
+            Channel Name
+            <TextField
+              fullWidth
+              autoFocus
+              id="name"
+              type="text"
+              margin="dense"
+              variant="standard"
+            />
+          </DialogContent>
 
-        <DialogActions>
-          <Button variant="outlined" color="secondary" onClick={handleClose}>
-            Cancel
-          </Button>
+          <DialogActions>
+            <Button variant="outlined" color="secondary" onClick={handleClose}>
+              Cancel
+            </Button>
 
-          <Button onClick={handleClose} color="primary">
-            Create
-          </Button>
-        </DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Create
+            </Button>
+          </DialogActions>
+        </Box>
       </Dialog>
     </Box>
   );

@@ -27,22 +27,24 @@ export default function FormDialog() {
 
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         {/* <DialogTitle id="form-dialog-title">Add Category</DialogTitle> */}
-        <DialogTitle>{'Add Category'}</DialogTitle>
+        <Box sx={{ color: '#0d47a1' }}>
+          <DialogTitle>{'Add Category'}</DialogTitle>
 
-        <DialogContent>
-          Category Name
-          <TextField fullWidth autoFocus id="name" type="file" margin="dense" />
-        </DialogContent>
+          <DialogContent>
+            Category Name
+            <TextField fullWidth autoFocus id="name" type="file" margin="dense" />
+          </DialogContent>
 
-        <DialogActions>
-          <Button variant="outlined" color="secondary" onClick={handleClose}>
-            Close
-          </Button>
+          <DialogActions>
+            <Button variant="outlined" color="secondary" onClick={handleClose}>
+              Close
+            </Button>
 
-          <Button onClick={handleClose} color="primary">
-            Add
-          </Button>
-        </DialogActions>
+            <Button onClick={handleClose} color="primary">
+              Add
+            </Button>
+          </DialogActions>
+        </Box>
       </Dialog>
     </Box>
   );
