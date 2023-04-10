@@ -1,24 +1,20 @@
-#channel-parent {
-    display: flex;
-}
-
 #channel {
-    /* background-color: rgb(210, 239, 243); */
-    width: 15%;
-    height: 100%;
-    /* display: flex; */
-    /* align-items: center; */
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
 }
 
 .list {
     background-color: white;
     border: 1px solid gray;
     width: 80%;
-    height: 180px;
+    height: auto;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin: 0px 0px 5px 10px;
+    margin-top: 0px;
 }
 
 .list .list-image {
@@ -54,9 +50,9 @@
 #inside-channel {
     /* background-color: rgb(245, 242, 206); */
     /* background-color: rgb(245, 242, 206); */
-    width: 85%;
+    width: 90%;
     height: 100%;
-    /* margin: 20px 0px 20px 50px; */
+    margin: 10px 0px 0px 10px;
     display: flex;
     /* border: 1px solid rgb(233, 231, 231); */
 }
@@ -74,7 +70,7 @@
     font-size: large;
     max-width: 100%;
     min-height: 60px;
-    height: 64vmax !important;
+    height: 20vmax !important;
     overflow-y: scroll;
     border-radius: 5px;
     border: 1px solid lightgray;

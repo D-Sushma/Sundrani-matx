@@ -1,7 +1,7 @@
 const ChannelListObject = [
   {
     id: 1,
-    list_name: 'Sundrani Cannel ',
+    list_name: 'Sundrani Channel ',
     channel_img: '/assets/images_1/img_1.jpg'
     // channel_img: '/assets/images_1/img_1.jpg''https://www.example.com/images/img123.jpg',
   },
@@ -12,22 +12,22 @@ const ChannelListObject = [
   },
   {
     id: 3,
-    list_name: 'Sundrani Cannel ',
+    list_name: 'Sundrani Channel ',
     channel_img: '/assets/images_1/img_3.jpg'
   },
   {
     id: 4,
-    list_name: 'Sundrani Cannel ',
+    list_name: 'Sundrani Channel ',
     channel_img: '/assets/images_1/img_4.jpg'
   },
   {
     id: 5,
-    list_name: 'Sundrani Cannel ',
+    list_name: 'Sundrani Channel ',
     channel_img: '/assets/images_1/img_5.jpg'
   },
   {
     id: 6,
-    list_name: 'Sundrani Cannel ',
+    list_name: 'Sundrani Channel ',
     channel_img: '/assets/images_1/img_6.jpg'
   }
 ];
