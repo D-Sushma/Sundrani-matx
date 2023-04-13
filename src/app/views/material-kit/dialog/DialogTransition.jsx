@@ -12,21 +12,21 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function AlertDialogSlide() {
-  const [open, setOpen] = useState(false);
+  const [o, setO] = useState(false);
 
-  const handleClickOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClickO = () => setO(true);
+  const handleClo = () => setO(false);
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="outlined" color="primary" onClick={handleClickO}>
         Slide in alert dialog
       </Button>
 
       <Dialog
-        open={open}
+        open={o}
         keepMounted
-        onClose={handleClose}
+        onClose={handleClo}
         TransitionComponent={Transition}
         aria-labelledby="alert-dialog-slide-title"
         aria-describedby="alert-dialog-slide-description"
@@ -41,11 +41,11 @@ export default function AlertDialogSlide() {
         </DialogContent>
 
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClickO} color="primary">
             Disagree
           </Button>
 
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClo} color="primary">
             Agree
           </Button>
         </DialogActions>
