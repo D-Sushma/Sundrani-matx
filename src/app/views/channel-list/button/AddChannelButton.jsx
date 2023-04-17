@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { Box } from '@mui/material';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import TextField from '@mui/material/TextField';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
+import { useState } from "react";
+import { Box } from "@mui/material";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import TextField from "@mui/material/TextField";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
 // import DialogContentText from '@mui/material/DialogContentText';
 
 export default function FormDialog() {
@@ -19,23 +19,29 @@ export default function FormDialog() {
       <Button
         variant="outlined"
         color="secondary"
-        style={{ border: '3px solid orange' }}
+        style={{ border: "3px solid red" }}
         sx={{
-          m: 2,
-          fontWeight: 'bold',
-          color: 'red',
-          fontSize: 'large',
-          borderRadius: '10px 0px 10px 0px'
+          m: "0px 0px 20px 1200px",
+          fontWeight: "bold",
+          color: "red",
+          fontSize: "large",
+          borderRadius: "10px 0px 10px 0px",
+          display: "flex",
+          justifyContent: "flex-end",
         }}
         onClick={handleClickOpen}
       >
         Add Channel
       </Button>
 
-      <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="form-dialog-title"
+      >
         {/* <DialogTitle id="form-dialog-title">Create Channel</DialogTitle> */}
-        <Box sx={{ color: '#0d47a1' }}>
-          <DialogTitle>{'Create Channel'}</DialogTitle>
+        <Box sx={{ color: "#0d47a1" }}>
+          <DialogTitle>{"Create Channel"}</DialogTitle>
 
           <DialogContent>
             {/* <DialogContentText>

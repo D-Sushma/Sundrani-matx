@@ -7,8 +7,8 @@ const ShowAllButton = Loadable(lazy(() => import('./button/ShowAllButton')));
 
 const ChannelListRoutes = [
     { path: '/channel-list/ChannelList', element: <ChannelList /> },
-    { path: '/channel-list/OnMainVideo', element: <OnMainVideo /> },
-    { path: '/channel-list/shared/ShowAllButton', element: <ShowAllButton /> },
+    { path: '/channel-list/button/OnMainVideo', element: <OnMainVideo /> },
+    { path: '/channel-list/button/ShowAllButton', element: <ShowAllButton /> },
 ];
 
 export default ChannelListRoutes;

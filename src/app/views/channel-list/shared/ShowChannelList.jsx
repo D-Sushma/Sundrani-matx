@@ -14,6 +14,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import Slide from '@mui/material/Slide';
 import Categories from './Categories';
 import MainVideo from './MainVideo';
+import PopularVideo from './PopularVideo'
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -156,14 +157,16 @@ export default function ShowChannelList() {
             </>
           );
         })}
+      <Button sx={{width:"100px", height:"50px", borderRadius:"50%", background: 'linear-gradient(to right bottom, gray, #fff)'}}> Show All</Button>
       </Box>
 
-      <Divider sx={{ borderBottomWidth: 4, marginRight: '5%' }} />
+      {/* <Divider sx={{ borderBottomWidth: 4, marginRight: '5%' }} /> */}
 
       <MainVideo />
       <Categories />
+      <PopularVideo/>
 
-      <Box id="inside-channel">
+      {/* <Box id="inside-channel">
         <Box className="categories">
           <h1 style={{ marginLeft: '5px' }}>Categories</h1>
           <Box className="categories-list" sx={{ fontSize: 'large' }}>
@@ -324,7 +327,7 @@ export default function ShowChannelList() {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
     </React.Fragment>
   );
 }

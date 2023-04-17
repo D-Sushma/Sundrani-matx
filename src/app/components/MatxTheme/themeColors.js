@@ -224,6 +224,24 @@ export const themeColors = {
       text: textDark,
     },
   },
+  whiteRed: {
+    palette: {
+      type: 'light',
+      primary: {
+        main: '#ffffff',
+        contrastText: textLight.primary,
+      },
+      secondary: {
+        main: '#e53935',
+       contrastText: '#ffffff',
+      },
+      background: {
+        paper: '#fff',
+        default: '#fafafa',
+      },
+      text: textLight,
+    },
+  },
 };
 
 export const themeShadows = [
