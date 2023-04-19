@@ -1,9 +1,9 @@
 import React, { useState, forwardRef } from 'react';
 import '../channel.css';
-import { Box, IconButton, Icon, Button, Divider } from '@mui/material';
+import { Box, IconButton, Icon, Button, Divider, styled } from '@mui/material';
 import ChannelListObject from './ChannelListObject';
-import { useNavigate } from 'react-router-dom';
-import AddCategoriesButton from '../button/AddCategoriesButton';
+// import { useNavigate } from "react-router-dom";
+// import AddCategoriesButton from "../button/AddCategoriesButton";
 import AddChannelButton from '../button/AddChannelButton';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -14,7 +14,14 @@ import DialogContentText from '@mui/material/DialogContentText';
 import Slide from '@mui/material/Slide';
 import Categories from './Categories';
 import MainVideo from './MainVideo';
-import PopularVideo from './PopularVideo'
+import PopularVideo from './PopularVideo';
+// import Scrollbar from "react-perfect-scrollbar";
+
+// const StyledScrollBar = styled(Scrollbar)(() => ({
+//   paddingLeft: "1rem",
+//   paddingRight: "1rem",
+//   position: "relative",
+// }));
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -29,11 +36,12 @@ export default function ShowChannelList() {
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <React.Fragment>
       <AddChannelButton />
 
+      {/* <StyledScrollBar options={{ suppressScrollY: true }}> */}
       <Box id="channel">
         {ChannelListObject.map((ele, i) => {
           // console.log('ele', ele);
@@ -69,7 +77,11 @@ export default function ShowChannelList() {
                       TransitionComponent={Transition}
                       aria-labelledby="alert-dialog-slide-title"
                       aria-describedby="alert-dialog-slide-description"
-                      BackdropProps={{ style: { backgroundColor: 'rgba(0.1, 0.1, 0.1, 0.2)' } }}
+                      BackdropProps={{
+                        style: {
+                          backgroundColor: 'rgba(0.1, 0.1, 0.1, 0.2)'
+                        }
+                      }}
                       // BackdropProps ={{ style: { backgroundColor: 'rgba(52, 52, 52, 0.1)' }, }}
                       // BackdropProps ={{ style: { backgroundColor: 'transparent' }, }}
                     >
@@ -103,7 +115,11 @@ export default function ShowChannelList() {
                     <Dialog
                       open={open}
                       onClose={handleClose}
-                      BackdropProps={{ style: { backgroundColor: 'rgba(0.1, 0.1, 0.1, 0.2)' } }}
+                      BackdropProps={{
+                        style: {
+                          backgroundColor: 'rgba(0.1, 0.1, 0.1, 0.2)'
+                        }
+                      }}
                     >
                       <Box sx={{ color: '#0d47a1' }}>
                         <DialogTitle>{'Edit Channel'}</DialogTitle>
@@ -157,14 +173,25 @@ export default function ShowChannelList() {
             </>
           );
         })}
-      <Button sx={{width:"100px", height:"50px", borderRadius:"50%", background: 'linear-gradient(to right bottom, gray, #fff)'}}> Show All</Button>
+        <Button
+          sx={{
+            width: '100px',
+            height: '50px',
+            borderRadius: '50%',
+            background: 'linear-gradient(to right bottom, gray, #fff)'
+          }}
+        >
+          {' '}
+          Show All
+        </Button>
       </Box>
+      {/* </StyledScrollBar> */}
 
       {/* <Divider sx={{ borderBottomWidth: 4, marginRight: '5%' }} /> */}
 
       <MainVideo />
       <Categories />
-      <PopularVideo/>
+      <PopularVideo />
 
       {/* <Box id="inside-channel">
         <Box className="categories">

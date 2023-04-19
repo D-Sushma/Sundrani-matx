@@ -8,17 +8,18 @@ export default function Categories() {
         sx={{
           width: '100%',
           height: '200px',
-          border: '1px solid lightgray',
+          // border: '1px solid lightgray',
           backgroundColor: 'whitesmoke',
-          marginTop: 1
+          marginTop: 1,
+          marginBottom: 1
         }}
       >
         <Box
           sx={{
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'center',
-            background: 'linear-gradient(to right bottom, #fff, #72A2c0)'
+            alignItems: 'center'
+            // background: 'linear-gradient(to right bottom, #fff, #72A2c0)'
           }}
         >
           <p style={{ color: 'blue', fontSize: '25px', fontWeight: 'bold', marginLeft: '5px' }}>

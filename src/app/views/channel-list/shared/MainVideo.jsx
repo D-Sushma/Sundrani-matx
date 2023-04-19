@@ -1,16 +1,17 @@
-import React, { useState, forwardRef } from "react";
-import "../channel.css";
-import { useNavigate } from "react-router-dom";
-import { Box, IconButton, Icon, Button, Divider } from "@mui/material";
-import MainVideoObject from "./MainVideoObject";
-import TextField from "@mui/material/TextField";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import Slide from "@mui/material/Slide";
-import shadows from "@mui/material/styles/shadows";
+import React, { useState, forwardRef } from 'react';
+import '../channel.css';
+import { useNavigate } from 'react-router-dom';
+import { Box, IconButton, Icon, Button, Divider } from '@mui/material';
+import MainVideoObject from './MainVideoObject';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import Slide from '@mui/material/Slide';
+import shadows from '@mui/material/styles/shadows';
+import ComplexButton from '../button/ComplexButton';
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -30,27 +31,27 @@ export default function MainVideo() {
     <>
       <Box
         sx={{
-          width: "100%",
-          height: "auto",
+          width: '100%',
+          height: 'auto',
           // border: '1px solid lightgray',
-          backgroundColor: "whitesmoke",
+          backgroundColor: 'whitesmoke'
         }}
       >
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center'
             // background: 'linear-gradient(to right bottom,red, #fff, red)'
             // background: 'linear-gradient(to right bottom, #fff, #72A2c0)'
           }}
         >
           <p
             style={{
-              background: "linear-gradient(to right bottom,red, #fff, red)",
-              fontSize: "25px",
-              fontWeight: "bold",
-              marginLeft: "5px",
+              background: 'linear-gradient(to right bottom,red, #fff, red)',
+              fontSize: '25px',
+              fontWeight: 'bold',
+              marginLeft: '5px'
             }}
           >
             Main Video
@@ -58,36 +59,36 @@ export default function MainVideo() {
           <Button
             variant="contained"
             color="error"
-            sx={{ fontWeight: "bold", fontSize: "large", marginRight: "5px" }}
-            onClick={() => navigate("/channel-list/button/OnMainVideo")}
+            sx={{ fontWeight: 'bold', fontSize: 'large', marginRight: '5px' }}
+            onClick={() => navigate('/channel-list/button/OnMainVideo')}
           >
             +Add Main Video
           </Button>
         </Box>
 
-        <Box sx={{ display: "flex", flexWrap: "wrap" }}>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
           {MainVideoObject.map((ele, i) => {
             // console.log('ele', ele);
             return (
               <>
                 <Box
                   sx={{
-                    width: "250px",
-                    height: "250px",
-                    border: "1px solid #72A2c0",
+                    width: '250px',
+                    height: '250px',
+                    border: '1px solid #72A2c0',
                     marginTop: 2,
                     marginLeft: 1,
                     marginBottom: 2,
-                    borderRadius: "10px",
-                    boxShadow: 5,
+                    borderRadius: '10px',
+                    boxShadow: 5
                   }}
                 >
                   <Box
                     sx={{
-                      width: "100%",
-                      height: "200px",
-                      border: "3px solid black",
-                      borderRadius: "10px 10px 0px 0px",
+                      width: '100%',
+                      height: '200px',
+                      border: '1px solid black',
+                      borderRadius: '10px 10px 0px 0px'
                       // background: 'linear-gradient(to right bottom, #430089, #82ffa1)'
                     }}
                   >
@@ -96,22 +97,22 @@ export default function MainVideo() {
                       src={ele.channel_img}
                       alt="channel-logo"
                       // sx={{ border: '3px solid black', width:"50px", height:"50px" }}
-                      style={{ width: "100%", height: "100%" }}
+                      style={{ width: '100%', height: '100%', borderRadius: '10px 10px 0px 0px' }}
                     />
                   </Box>
                   <Box
                     // key={i}
                     sx={{
-                      fontWeight: "bold",
-                      fontSize: "larger",
-                      width: "100%",
-                      height: "50px",
-                      backgroundColor: "gray",
-                      color: "white",
-                      borderRadius: "0px 0px 10px 10px",
+                      fontWeight: '5px',
+                      fontSize: 'larger',
+                      width: '100%',
+                      height: '50px',
+                      backgroundColor: 'rgba(0, 0, 0, 0.12)',
+                      color: 'black',
+                      borderRadius: '0px 0px 10px 10px'
                     }}
                   >
-                    {ele.list_name}
+                    <div style={{ marginLeft: '5px' }}>{ele.list_name}</div>
                     {/* sundrani video */}
                   </Box>
                   {/* <Box className="list-name" sx={{ display: 'flex' }}>
@@ -212,8 +213,9 @@ export default function MainVideo() {
               </>
             );
           })}
+          <ComplexButton />
         </Box>
-        <Box
+        {/* <Box
           style={{
             width: 160,
             height: "180px",
@@ -229,7 +231,7 @@ export default function MainVideo() {
           >
             Show All
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );

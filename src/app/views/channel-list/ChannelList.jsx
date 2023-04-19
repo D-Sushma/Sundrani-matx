@@ -23,11 +23,14 @@ export default function ChannelList() {
   return (
     <>
       <ProgressRoot>
-          <div className="breadcrumb">
-            <Breadcrumb
-              routeSegments={[{ name: 'channel-list', path: '../channel-list/ChannelList' }, { name: 'ChannelList' }]}
-            />
-          </div>
+        <div className="breadcrumb">
+          <Breadcrumb
+            routeSegments={[
+              { name: 'channel-list', path: '../channel-list/ChannelList' },
+              { name: 'ChannelList' }
+            ]}
+          />
+        </div>
         <ShowChannelList />
       </ProgressRoot>
     </>
